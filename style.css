@@ -77,7 +77,8 @@ h1,h3{
 
 #container{
     height: 70%;
-    width: 30%;
+    width: 95%;
+    font-size: small;
     border-radius: 30px;
     margin-top: 10px;
     /* background-color: rgb(190, 201, 206); */
