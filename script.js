@@ -9,6 +9,9 @@ let size = 16;
 let bok = 10;
 var start = document.querySelector("#start");
 var done = document.querySelector("#done");
+const aud1 = new Audio('2.mp3');
+const aud2 = new Audio('3.mp3');
+const aud3 = new Audio('4.m4a');
 
 
 yes.addEventListener("click",function(){
@@ -32,6 +35,7 @@ no.addEventListener("click", function handleNO(){
     if (noCount == 1){
         no.innerHTML = `
     <h2 style = "color:black;font-size: 10px;">no!</h2>`
+    aud1.play();
         h1.innerHTML = "Sorry dii ab maaf v krdo n please🥺";
     h3.innerHTML = "ab se no badmasi🥺promiss👍 only pdhai";
         
@@ -48,6 +52,9 @@ no.addEventListener("click", function handleNO(){
     else if (noCount == 2){
         no.innerHTML = `
     <h2 style = "color:black;font-size: 8px;">no!</h2>`
+    aud1.pause();
+    aud2.play();
+    aud2.volume = 0.2;
         h1.innerHTML = "<p>waise v april-attmpt ke baad Aap chli jaaogi na??🥺 </p>";
         h3.innerHTML = "<p>To abse no faaltu baat.only pdhai.</p>"
 
@@ -65,6 +72,8 @@ no.addEventListener("click", function handleNO(){
     else if (noCount == 3){
         no.innerHTML = `
     <h2 style = "color:black;font-size: 5px;">no!</h2>`
+    aud3.play();
+    aud2.pause();
         h1.innerHTML = "<p>ab maan v jao na dii??🥺 please</p>";
         h3.innerHTML = "<p>ab kitna code krwaogi??🥺</p>";
     
@@ -82,7 +91,10 @@ no.addEventListener("click", function handleNO(){
 }) 
 
 yes.addEventListener("click", function handleYES(){
-    h1.innerHTML = "<h1>Thanku dii🥰</h1>";
+    aud3.pause();
+    aud1.pause();
+    aud2.pause();
+    h1.innerHTML = "<h1>Thanku KB🥰</h1>";
     h3.innerHTML = "<p>Unblock krdo diii💕Now we are jst tech frnd!!</p>";
         sticker.src = "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDRxMnhnaG0wem9qZWczd25ycGNodHV0NzdtdGx1dnJsOW1nMXgxeiZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/67KsrjDg2bUWI5uyvB/200w.webp";
         yes.innerHTML = "✔️";
@@ -123,6 +135,8 @@ yes.addEventListener("click", function(){
     yes.display = "none";
     yes.style.backgroundColor = "transparent";
     no.style.display = "none";
+
+    
 })
 
 for (let i = 0; i < 70; i++){
